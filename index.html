@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e2f51c3b8.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="script.js"></script>
+    
+</head>
+<body>
+    <header class="header__container u-flex-col u-flex-cc u-color-white">
+        
+        <h1 class="header__title u-font-size-lg ">Daily Mood</h1>
+        <h3 class="header__subtitle u-font-size-regular">Keep track of you everyday sentiment.</h3>
+        <a href="#section--1" class="header__start-btn submit-btn u-font-size-regular" id="header-btn">Explore More</a>
+    </header>
+    <section class="section" id="section--1">
+        <div class="title__container u-center-text u-flex-col">
+            <h1 class="title u-font-size-b">Mood Detector</h1>
+            <div class="title__underline"></div>
+        </div>
+
+        <div class="container u-flex-row-cc">
+        <div class="item item-input u-flex-col">
+            <datagrid class="item__date u-subtitle-font-size">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span class="item__date-num"></span>
+            </datagrid>
+            <textarea class="input__textarea " id="user-input" cols="30" rows="15" placeholder="Try to write something down here:)"></textarea>
+        </div>
+
+
+        
+            <div class="modal modal-add-to-archive u-subtitle-font-size u-display-none u-center-text" id="modal-add-to-archive">
+                <i class="fa-solid fa-circle-check" id="check-icon"></i>
+                <span class="modal__content">Diary added!</span>
+            </div>
+            <div class="overlay u-display-none"></div>
+            
+
+        <div class="item item-result u-flex-col u-flex-cc">
+            <div class="item__result-main">
+                <h2 class="result__title u-subtitle-font-size">Your text sentiment is...</h2>
+                <div class="result__main-container u-uppercase-text u-font-size-b u-center-text">
+                    <i class="fa-solid fa-spinner fa-1x u-display-none" style="color: lightgray;" id="loader"></i>
+                    <div class="result__main-value u-display-none"></div>
+                </div>
+            </div>
+            <div class="result__details u-font-size-regular">
+                <span class="result__detail u-flex-col" id="neg-detail">
+                    <div class="result__detail-label">negative</div>
+                    <span class="result__detail-num" id="num-negative"></span>
+
+                </span>
+                <span class="result__detail u-flex-col" id="neu-detail">
+                    <div class="result__detail-label">neutral</div>
+                    <span class="result__detail-num" id="num-neutral"></span>
+
+                </span>
+                <span class="result__detail u-flex-col" id="pos-detail">
+                    <div class="result__detail-label">positive</div>
+                    <span class="result__detail-num" id="num-positive"></span>
+
+                </span>
+            </div>
+        </div>
+    </div>
+
+        <div class="btn-container u-flex-row-cc">
+            <button class="item-input submit-btn" id="start-analysis">Analyze</button>
+            <button class="item-input submit-btn" id="add-to-archive" disabled="disabled">Add to archive</button>
+        </div>
+
+       
+    </section>
+
+    <section class="section diary u-flex-col" id="section--2">
+        <div class="section__background" id="section--2-bg"></div>
+
+        <div class="title__container u-center-text">
+            <h1 class="title u-font-size-b u-color-white">My Diary Archive</h1>
+            <div class="title__underline"></div>
+        </div>
+
+        <div class="diary__search-container u-flex-row-cc">
+            <input type="search" name="search-diary" class="search-bar u-color-white" id="diary-search-bar" placeholder="search diary..">
+            <button class="submit-btn search-btn" id="btn-search-diary">search</button>
+        </div>
+
+        <div class="diary__display u-flex-row-cc u-font-size-regular" id="gallery"></div>
+
+
+
+        <div class="modal  u-display-none" id="modal-display-diary">
+            <i class="fa-solid fa-xmark fa-lg top-right-btn" id="close-diary-modal-btn" style="color: var(--emphasize-red)"></i>
+            <div class="modal__title-container">
+                <div class="modal__title-label" id="label-1">
+                    <i class="fa-solid fa-calendar-days label-icon"></i>
+                    <span class="label-text">Date</span>
+                </div>
+                <div class="modal__title-text" id="text-1"></div>
+    
+                <div class="modal__title-label" id="label-2">
+                    <i class="fa-solid fa-face-meh-blank label-icon"></i>
+                    <span class="label-text" >Mood</span>
+                </div>
+                <div class="modal__title-text" id="text-2"></div>
+            </div>
+
+            <div class="modal__content" id="modal-main-content">
+            </div>
+        </div>  
+
+        <div class="modal modal-comfirm-delete u-font-size-regular u-center-text u-display-none" id="modal-comfirm-delete">
+            <span class="modal__content">Are you sure you want to delete this diary book?</span>
+            <div class="modal__btn-container u-flex-cc">
+                <button class="modal-btn modal__delete u-font-size-regular" id="modal-delete-yes">Yes</button>
+                <button class="modal-btn modal__cancel__delete u-font-size-regular" id="modal-delete-no">No</button>
+            </div>
+        </div>
+        
+       <div class="overlay u-display-none"></div>
+
+    </section>
+
+</body>
+</html>
+
+
