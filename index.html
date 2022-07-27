@@ -16,10 +16,11 @@
 </head>
 <body>
     <header class="header__container u-flex-col u-flex-cc u-color-white">
-        
         <h1 class="header__title u-font-size-lg ">Daily Mood</h1>
         <h3 class="header__subtitle u-font-size-regular">Keep track of you everyday sentiment.</h3>
         <a href="#section--1" class="header__start-btn submit-btn u-font-size-regular" id="header-btn">Explore More</a>
+        <div class="header__bg"></div>
+
     </header>
     <section class="section" id="section--1">
         <div class="title__container u-center-text u-flex-col">
@@ -31,7 +32,7 @@
         <div class="item item-input u-flex-col">
             <datagrid class="item__date u-subtitle-font-size">
                 <i class="fa-solid fa-calendar-days"></i>
-                <span class="item__date-num"></span>
+                <span class="item__date-num u-font-size-regular"></span>
             </datagrid>
             <textarea class="input__textarea " id="user-input" cols="30" rows="15" placeholder="Try to write something down here:)"></textarea>
         </div>
@@ -42,7 +43,6 @@
                 <i class="fa-solid fa-circle-check" id="check-icon"></i>
                 <span class="modal__content">Diary added!</span>
             </div>
-            <div class="overlay u-display-none"></div>
             
 
         <div class="item item-result u-flex-col u-flex-cc">
@@ -119,14 +119,14 @@
         </div>  
 
         <div class="modal modal-comfirm-delete u-font-size-regular u-center-text u-display-none" id="modal-comfirm-delete">
-            <span class="modal__content">Are you sure you want to delete this diary book?</span>
+            <span class="modal__content">Are you sure you want to delete this diary?</span>
             <div class="modal__btn-container u-flex-cc">
                 <button class="modal-btn modal__delete u-font-size-regular" id="modal-delete-yes">Yes</button>
                 <button class="modal-btn modal__cancel__delete u-font-size-regular" id="modal-delete-no">No</button>
             </div>
         </div>
         
-       <div class="overlay u-display-none"></div>
+        <div class="overlay u-display-none"></div>
 
     </section>
 

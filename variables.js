@@ -189,7 +189,7 @@ export const searchDiaryItem = function(text){
         }
     })
     if(!gallery.firstElementChild){
-    gallery.insertAdjacentText('afterbegin', 'No result :(');
+    gallery.insertAdjacentText('beforeend', 'No result :(');
     setTimeout(()=>{
         gallery.innerHTML = "";
         renderAllDiaryItems();

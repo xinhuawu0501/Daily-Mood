@@ -33,15 +33,15 @@ html{
 body{
     width: 100%;
     height: 100%;
-    background-color: var(--background-color);
     font-family: 'Varela Round', sans-serif;
     color: var(--font-regular);
-    padding: 0 15%;  
+    padding: 0 10%; 
+    background-color: var(--background-color);
 }
 
 /*utility class*/
-.u-font-size-lg{font-size: 4rem}
-.u-font-size-b{font-size: 3rem;}
+.u-font-size-lg{font-size: 5rem}
+.u-font-size-b{font-size: 4rem;}
 .u-subtitle-font-size{font-size: 2rem;}
 .u-font-size-regular{font-size: 1.6rem;}
 .u-center-text{text-align: center;}
@@ -73,7 +73,7 @@ body{
 
 .submit-btn{
     padding: 0 3rem;
-    height: 5rem;
+    height: 4.5rem;
     border-radius: 10rem;
     font-family: inherit;
     background-color: var(--btn-background);
@@ -97,11 +97,12 @@ body{
 }
 
 #header-btn{
-    margin-top: 4rem;
+    margin-top: 5rem;
     padding: 0 4.5rem;
     line-height: 5rem;
     color: rgb(21, 19, 42);
     position: relative;
+    z-index: 2;
 
 }
 
@@ -142,12 +143,18 @@ body{
 
 
 /* titles & subtitles*/
+.header__title{
+    z-index: 2;
+}
+
 .header__subtitle{
     color: #fffbfba0;
+    z-index: 2;
 }
 
 .title__container{
     margin-bottom: 3rem;
+    z-index: 1;
 }
 .title{
     font-weight: 700;
@@ -173,20 +180,23 @@ body{
 
 /*main body*/
 .header__container{
-    background: linear-gradient(to top right, rgb(45, 42, 90), rgb(23, 10, 39));
     height: 60vh;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
-}
-
-.section{
-    padding: 12rem 10%;
-}
-
-#section--1{
     position: relative;
-    top: -5rem;
 
 }
+
+.header__bg{
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(to top right, rgb(45, 42, 90), rgb(23, 10, 39));
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+    position: absolute;
+    z-index: 1;
+}
+.section{
+    padding: 7rem 10%;
+}
+
 .container{
     flex-wrap: wrap;
     width: 100%;
@@ -258,12 +268,11 @@ body{
     background-color: rgba(23, 19, 19, 0.496);
     width: 100vw;
     height: 100vh;
-    z-index: 10;
+    z-index: 3;
 }
 
 .modal{
     position: fixed;
-    z-index: 100;
     top: 30%;
     right: auto;
     left: auto;
@@ -272,6 +281,7 @@ body{
     box-shadow: 0 5px 10px rgba(79, 79, 79, 0.493);
     width: 20rem;
     height: 15rem;
+    z-index: 100;
 }
 
 #modal-add-to-archive{
@@ -343,16 +353,16 @@ body{
 #section--2{
     align-items: center;
     position: relative;
+    
 }
 
 #section--2-bg{
     position: absolute;
-    top: -5rem;
+    top: -2rem;
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
     background: linear-gradient(to bottom left, rgb(45, 42, 90), rgb(23, 10, 39));
     height: 50vh;
     width: 100%;
-    z-index: -1;
 }
 
 .diary__search-container{
@@ -360,6 +370,7 @@ body{
     max-width: 60rem;
     flex-wrap: wrap;
     padding: 2rem;
+    z-index: 1;
 }
 
 #diary-search-bar{
@@ -368,7 +379,7 @@ body{
     margin-right: 1rem;
     padding: 1rem 2rem;
     border-radius: 5rem;
-    height: 5rem;
+    height: 4.5rem;
 
 }
 
@@ -379,7 +390,7 @@ body{
 .diary__display{
     flex-wrap: wrap;
     width: 100%;
-    min-height: 25rem;
+    min-height: 50rem;
     color: var(--diary-modal-icon);
 }
 
@@ -409,7 +420,6 @@ body{
     height: 30%;
     border-radius: 0 0 1rem 1rem;
     background-color: white;
-    z-index: 2;
     padding: 2rem;
 }
 
@@ -424,7 +434,13 @@ body{
         padding: 8rem 2rem;
     }
     body{
-        padding: 0 5rem;
+        padding: 0 5%;
+    }
+    .u-font-size-lg{
+        font-size: 4rem;
+    }
+    .u-font-size-b{
+        font-size: 3rem;
     }
 }
 
@@ -434,6 +450,12 @@ body{
     }
     body{
         padding: 0;
+    }
+    .u-font-size-lg{
+        font-size: 3.5rem;
+    }
+    .u-font-size-b{
+        font-size: 2.5rem;
     }
 }
 
