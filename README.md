@@ -12,4 +12,10 @@ Functions:
   1. Responsive web design
   2. Alert modal before deleting diary
   3. Smooth srolling
+  4. Error handling
 
+Technique: 
+  1. AJAX(fetch, async/await, POST method)
+  2. Working with local storage (setItem/getItem)
+  3. JS module
+  4. Error handling with try...catch, throw error and guard clause
