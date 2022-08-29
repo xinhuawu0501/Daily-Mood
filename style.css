@@ -292,7 +292,7 @@ body{
 
 #modal-display-diary{
     height: 70%;
-    width: 60%;
+    width: 80%;
     max-width: 50rem;
     max-height: 60rem;
     top: 10%;
@@ -442,12 +442,6 @@ body{
     }
     .u-font-size-b{
         font-size: 3rem;
-    }
-}
-
-@media (max-width: 560px){
-    #modal-display-diary{
-        width: 90%;
     }
 }
 
