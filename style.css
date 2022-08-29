@@ -301,6 +301,7 @@ body{
 
 }
 
+
 .modal__title-container{
     display: grid;
     grid-template-columns: 2fr 5fr;
@@ -441,6 +442,12 @@ body{
     }
     .u-font-size-b{
         font-size: 3rem;
+    }
+}
+
+@media (max-width: 560px){
+    #modal-display-diary{
+        width: 80%;
     }
 }
 
