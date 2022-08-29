@@ -292,7 +292,7 @@ body{
 
 #modal-display-diary{
     height: 70%;
-    width: 90%;
+    width: 85vw;
     max-width: 50rem;
     max-height: 60rem;
     top: 10%;
